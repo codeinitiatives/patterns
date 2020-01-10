@@ -1,0 +1,46 @@
+#include<iostream>
+using namespace std;
+int main(){
+	int n,m,count=0;
+	
+  cout<<"Enter the number pattern is required";
+	cin>>n;
+	
+  m=n+(n-1);
+	
+  for(int i=n;i>=1;i--)
+	{
+		for(int j=0;j<count;j++){
+			cout<<"\t"<<n-j;
+		}
+		for(int j=0;j<m-2*count;j++)
+		{
+			cout<<"\t"<<i;
+		}
+		for(int j=count;j>0;j--){
+			cout<<"\t"<<n-j+1;
+		}
+		count++;
+		cout<<"\n";
+	}
+  
+	count--;
+	
+  for(int i=2;i<n;i++)
+	{
+		for(int j=0;j<count;j++){
+			cout<<"\t"<<n-j;
+		}
+		for(int j=0;j<m-2*count;j++)
+		{
+			cout<<"\t"<<i;
+		}
+		for(int j=count;j>0;j--){
+			cout<<"\t"<<n-j+1;
+		}
+	
+  count--;
+	
+  cout<<"\n";
+	}
+}
